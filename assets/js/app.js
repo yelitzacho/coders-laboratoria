@@ -3,22 +3,16 @@ var select = document.getElementById('select');
 
 select.onchange = function(){
   if(select.value == "chile-4"){
-    for (var i = 0; i < img.length; i++) {
-      img[i].classList.add("chile");
-      img[i].classList.remove("lima");
-      img[i].classList.remove("lima");
-    }
+    document.getElementById("chile-4").style.display = "inline";
+    document.getElementById("lima-5").style.display = "none";
+    document.getElementById("lima-6").style.display = "none";
   }else if (select.value == "lima-5") {
-    for (var i = 0; i < img.length; i++) {
-      img[i].classList.remove("chile");
-      img[i].classList.add("lima");
-      img[i].classList.remove("lima");
-    }
+    document.getElementById("chile-4").style.display = "none";
+    document.getElementById("lima-5").style.display = "inline";
+    document.getElementById("lima-6").style.display = "none";
   }else if (select.value == "lima-6") {
-    for (var i = 0; i < img.length; i++) {
-      img[i].classList.remove("chile");
-      img[i].classList.remove("lima");
-      img[i].classList.add("lima");
-    }
+    document.getElementById("chile-4").style.display = "none";
+    document.getElementById("lima-5").style.display = "none";
+    document.getElementById("lima-6").style.display = "inline";
   }
 }
